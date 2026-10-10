@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b12">
+  <title>Mizan Gaming | Free Fire Top-Up</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark">MG</span><span>MIZAN <b>GAMING</b><small>PLAY · GRIND · GROW</small></span></a>
+    <nav><a href="#topup">Top-Up</a><a href="#track">Track Order</a><a href="#support">Support</a></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">FAST · SIMPLE · SECURE</p><h1>FREE FIRE<br><span>DIAMOND TOP-UP</span></h1><p>UID দিন, প্যাকেজ বাছুন, অর্ডার ট্র্যাক করুন।</p><span class="demo-tag">DEMO PRICES · VERIFY BEFORE LAUNCH</span></div>
+      <div class="diamond-art" aria-hidden="true">💎</div>
+    </section>
+    <section class="layout" id="topup">
+      <form id="orderForm" class="panel">
+        <h2>💎 নতুন টপ-আপ অর্ডার</h2>
+        <label for="playerUid">Free Fire Player UID</label>
+        <input id="playerUid" name="playerUid" inputmode="numeric" autocomplete="off" placeholder="শুধু সংখ্যায় UID লিখুন" minlength="6" maxlength="20" required>
+        <p class="hint">আপনার UID ভালোভাবে যাচাই করুন। Free Fire পাসওয়ার্ড লাগবে না।</p>
+        <label>ডায়মন্ড প্যাকেজ নির্বাচন করুন</label>
+        <div id="packages" class="packages">
+          <label class="package"><input type="radio" name="packageId" value="p100" required><span class="gem">💎</span><strong>100</strong><small>ডায়মন্ড</small><b>৳ 120</b></label>
+          <label class="package"><input type="radio" name="packageId" value="p310"><span class="gem">💎💎</span><strong>310</strong><small>ডায়মন্ড</small><b>৳ 350</b></label>
+          <label class="package"><input type="radio" name="packageId" value="p520"><span class="gem">💎💎💎</span><strong>520</strong><small>ডায়মন্ড</small><b>৳ 580</b></label>
+        </div>
+        <label for="paymentMethod">পেমেন্ট পদ্ধতি</label>
+        <select id="paymentMethod" name="paymentMethod" required><option value="">পদ্ধতি নির্বাচন করুন</option><option value="bkash">bKash</option><option value="nagad">Nagad</option></select>
+        <div class="notice"><strong>পেমেন্ট তথ্য:</strong> এই ডেমোতে কোনো আসল নম্বর দেওয়া নেই। সাইট চালুর আগে নিজের যাচাইকৃত মার্চেন্ট/ব্যবসায়িক পেমেন্ট নির্দেশনা এখানে যোগ করুন।</div>
+        <label for="transactionRef">Transaction ID / Reference</label>
+        <input id="transactionRef" name="transactionRef" maxlength="80" placeholder="পেমেন্টের Transaction ID" required>
+        <label for="customerNote">অতিরিক্ত নোট (ঐচ্ছিক)</label>
+        <input id="customerNote" name="customerNote" maxlength="250" placeholder="প্রয়োজনে নোট লিখুন">
+        <label class="checkline"><input type="checkbox" id="confirm" required> আমি UID ও পেমেন্টের তথ্য যাচাই করেছি।</label>
+        <button class="primary" type="submit">অর্ডার জমা দিন <span>→</span></button>
+        <p class="hint">Transaction ID দিলেই পেমেন্ট নিশ্চিত হয় না; Admin অফিসিয়াল অ্যাকাউন্টে যাচাই করবেন।</p>
+        <div id="orderMessage" class="message" role="status" aria-live="polite"></div>
+      </form>
+      <aside class="side-stack">
+        <div class="panel feature"><span>⚡</span><div><h3>ম্যানুয়াল যাচাই</h3><p>পেমেন্ট যাচাইয়ের পর অর্ডারের স্ট্যাটাস আপডেট হবে।</p></div></div>
+        <div class="panel feature"><span>🛡️</span><div><h3>নিরাপদ তথ্য</h3><p>কোনো PIN, OTP বা গেমের পাসওয়ার্ড চাই না।</p></div></div>
+        <div class="panel feature"><span>📦</span><div><h3>অর্ডার ট্র্যাকিং</h3><p>অর্ডার নম্বর সংরক্ষণ করুন এবং পরে স্ট্যাটাস দেখুন।</p></div></div>
+        <div class="panel" id="track"><h2>🔎 অর্ডার ট্র্যাক করুন</h2><form id="trackForm"><label for="orderCode">অর্ডার নম্বর</label><input id="orderCode" placeholder="যেমন MZ12AB34CD56" required><button class="secondary" type="submit">স্ট্যাটাস দেখুন</button></form><div id="trackMessage" class="message" role="status" aria-live="polite"></div></div>
+        <div class="panel" id="support"><h2>📞 সহায়তা</h2><p>সাইট চালুর আগে এখানে যাচাইকৃত সাপোর্ট ফোন/ইমেইল যোগ করুন।</p><p class="hint">কোনো অনুমোদিত সরবরাহকারী নিশ্চিত না হওয়া পর্যন্ত ডায়মন্ড ডেলিভারির প্রতিশ্রুতি দেবেন না।</p></div>
+      </aside>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> Mizan Gaming · Demo MVP · <a href="/admin">Admin</a></footer>
+</body>
+</html>

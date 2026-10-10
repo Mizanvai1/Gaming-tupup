@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="bn">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mizan Gaming | Admin</title><link rel="stylesheet" href="/styles.css"><script src="/admin.js" defer></script></head>
+<body>
+<header class="topbar"><a class="brand" href="/"><span class="brand-mark">MG</span><span>MIZAN <b>GAMING</b><small>ADMIN PANEL</small></span></a><a href="/">← সাইটে ফিরে যান</a></header>
+<main class="admin-main">
+  <section class="panel" id="loginPanel"><h1>Admin Login</h1><p class="hint">শুধু অনুমোদিত অ্যাডমিনের জন্য।</p><form id="loginForm"><label for="username">Username</label><input id="username" autocomplete="username" required maxlength="80"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required><button class="primary">লগইন করুন</button></form><div id="loginMessage" class="message" role="status"></div></section>
+  <section id="dashboard" hidden>
+    <div class="admin-head"><div><h1>অর্ডার ড্যাশবোর্ড</h1><p class="hint">প্রতিটি পেমেন্ট অফিসিয়াল অ্যাকাউন্টে যাচাই করুন।</p></div><button id="logoutButton" class="secondary">লগআউট</button></div>
+    <section class="panel"><div class="filters"><input id="search" placeholder="অর্ডার নম্বর বা UID খুঁজুন"><select id="statusFilter"><option value="">সব স্ট্যাটাস</option><option>pending</option><option>verified</option><option>processing</option><option>completed</option><option>rejected</option><option>refunded</option></select><button id="refreshButton" class="secondary">Refresh</button></div><div id="ordersMessage" class="message"></div><div id="orders" class="orders"></div></section>
+  </section>
+</main>
+<footer>Mizan Gaming · Admin tools</footer>
+</body></html>
